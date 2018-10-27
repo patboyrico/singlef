@@ -1,0 +1,19 @@
+<section class="login">
+    <h3 class="login__header">Login to your account</h3>
+    <form class="login__form" #loginForm=ngForm (ngSubmit)="onSubmit()">
+      <h5 class="login__form-header"> Sign In With Email</h5>
+        <div class="login__form-group">
+            <input class="login__form-input" type="email" id="email" name="email" placeholder="Email Address" [(ngModel)]="form.email" required>
+        </div>
+        <div class="login__form-group">
+            <input class="login__form-input" type="password" id="password" name="password" placeholder="Password" [(ngModel)]="form.password" required>
+        </div>
+        <div class="login__form-submit">
+            <button type="submit" class="btn-submit" [disabled]="!loginForm.valid">Login</button>
+        </div>
+        <div class="form__signIn">
+            <a href ="/signup" class="form__signIn-text">Don't have an account?</a>
+        </div>
+    </form>
+
+</section>
